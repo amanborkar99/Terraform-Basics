@@ -1,0 +1,4 @@
+>> On day 1 I actually get into the introduction part of Terraform as mediator between API and Terraform Provider so in documentation I got to know about Terraform why it is used.
+>> So basically Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and popular service providers as well as custom in-house solutions.
+>> Then Learned about the Terraform Configuration file.
+>> Got to know about the concept of "Infrastructure as Code"--Infrastructure as code (IaC) means to manage your IT infrastructure using configuration files.
