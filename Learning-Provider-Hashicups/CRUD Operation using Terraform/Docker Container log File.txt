@@ -1,0 +1,175 @@
+Aman@LAPTOP-C9SAAA6H MINGW64 ~/Desktop/VS XD (master)
+$ git clone https://github.com/hashicorp/learn-terraform-hashicups-provider && cd learn-terraform-hashicups-provider
+Cloning into 'learn-terraform-hashicups-provider'...
+remote: Enumerating objects: 33, done.
+remote: Counting objects: 100% (33/33), done.
+remote: Compressing objects: 100% (24/24), done.
+remote: Total 33 (delta 14), reused 24 (delta 8), pack-reused 0
+Receiving objects: 100% (33/33), 4.31 KiB | 630.00 KiB/s, done.
+Resolving deltas: 100% (14/14), done.
+
+Aman@LAPTOP-C9SAAA6H MINGW64 ~/Desktop/VS XD/learn-terraform-hashicups-provider (master)
+$ cd docker_compose && docker-compose up
+Docker Compose is now in the Docker CLI, try `docker compose up`
+
+Creating network "docker_compose_default" with the default driver
+Pulling db (hashicorpdemoapp/product-api-db:v4280cf7)...
+v4280cf7: Pulling from hashicorpdemoapp/product-api-db
+d599a449871e: Pull complete
+2ddf9fad2006: Pull complete
+a60892c15ec0: Pull complete
+75e03bfe93e9: Pull complete
+62558287f90b: Pull complete
+f7f7c2564b8f: Pull complete
+43b55e177d25: Pull complete
+6cdb6c6e946b: Pull complete
+d210255df7e3: Pull complete
+fbb4c12b8149: Pull complete
+69b1096dd930: Pull complete
+73f3b8fa196b: Pull complete
+7720636b16fa: Pull complete
+db3d7e34d278: Pull complete
+3f3858a782f5: Pull complete
+bdc6e76bfff4: Pull complete
+Digest: sha256:4b0a064fe019ef3a1b31dc01d837dae1b141e6ae6053f38e41af28150b8a4470
+Status: Downloaded newer image for hashicorpdemoapp/product-api-db:v4280cf7
+Pulling api (hashicorpdemoapp/product-api:v4280cf7)...
+v4280cf7: Pulling from hashicorpdemoapp/product-api
+cbdbe7a5bc2a: Pull complete
+8246d5ae59e2: Pull complete
+3f1e85df6f1c: Pull complete
+ff8d97847668: Pull complete
+Digest: sha256:cb7dafcd376e6ba18f7b2069abf51ad1340df1232cb0779b9d5f047e19400bbb
+Status: Downloaded newer image for hashicorpdemoapp/product-api:v4280cf7
+Creating docker_compose_db_1 ... done
+Creating docker_compose_api_1 ... done
+Attaching to docker_compose_db_1, docker_compose_api_1
+db_1   | The files belonging to this database system will be owned by user "postgres".
+db_1   | This user must also own the server process.
+db_1   |
+db_1   | The database cluster will be initialized with locale "en_US.utf8".
+db_1   | The default database encoding has accordingly been set to "UTF8".
+db_1   | The default text search configuration will be set to "english".
+db_1   |
+db_1   | Data page checksums are disabled.
+db_1   |
+db_1   | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+db_1   | creating subdirectories ... ok
+db_1   | selecting default max_connections ... 100
+db_1   | selecting default shared_buffers ... 128MB
+db_1   | selecting default timezone ... Etc/UTC
+db_1   | selecting dynamic shared memory implementation ... posix
+db_1   | creating configuration files ... ok
+db_1   | running bootstrap script ... ok
+api_1  | 2021-04-11T08:33:49.780Z [ERROR] Unable to connect to database: error="dial tcp 172.18.0.2:5432: connect: connection refused"
+db_1   | performing post-bootstrap initialization ... ok
+db_1   | syncing data to disk ... ok
+db_1   |
+db_1   | Success. You can now start the database server using:
+db_1   |
+db_1   |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+db_1   |
+db_1   |
+db_1   | WARNING: enabling "trust" authentication for local connections
+db_1   | You can change this by editing pg_hba.conf or using the option -A, or
+db_1   | --auth-local and --auth-host, the next time you run initdb.
+db_1   | waiting for server to start....2021-04-11 08:33:50.045 UTC [47] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1   | 2021-04-11 08:33:50.062 UTC [48] LOG:  database system was shut down at 2021-04-11 08:33:49 UTC
+db_1   | 2021-04-11 08:33:50.067 UTC [47] LOG:  database system is ready to accept connections
+db_1   |  done
+db_1   | server started
+db_1   | CREATE DATABASE
+db_1   |
+db_1   |
+db_1   | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/products.sql
+db_1   | SET
+db_1   | CREATE EXTENSION
+db_1   | CREATE TABLE
+db_1   | CREATE TABLE
+db_1   | CREATE TABLE
+db_1   | CREATE TABLE
+db_1   | CREATE TABLE
+db_1   | CREATE TABLE
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   | INSERT 0 1
+db_1   |
+db_1   |
+db_1   | waiting for server to shut down...2021-04-11 08:33:50.626 UTC [47] LOG:  received fast shutdown request
+db_1   | .2021-04-11 08:33:50.630 UTC [47] LOG:  aborting any active transactions
+db_1   | 2021-04-11 08:33:50.631 UTC [47] LOG:  background worker "logical replication launcher" (PID 54) exited with exit code 1
+db_1   | 2021-04-11 08:33:50.632 UTC [49] LOG:  shutting down
+db_1   | 2021-04-11 08:33:50.667 UTC [47] LOG:  database system is shut down
+db_1   |  done
+db_1   | server stopped
+db_1   |
+db_1   | PostgreSQL init process complete; ready for start up.
+db_1   |
+db_1   | 2021-04-11 08:33:50.742 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db_1   | 2021-04-11 08:33:50.743 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db_1   | 2021-04-11 08:33:50.748 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1   | 2021-04-11 08:33:50.765 UTC [74] LOG:  database system was shut down at 2021-04-11 08:33:50 UTC
+db_1   | 2021-04-11 08:33:50.774 UTC [1] LOG:  database system is ready to accept connections
+api_1  | 2021-04-11T08:33:50.789Z [INFO]  Starting service: bind=0.0.0.0:9090 metrics=localhost:9102
+api_1  | 2021-04-11T09:38:46.362Z [INFO]  Handle User | signup
+api_1  | 2021-04-11T09:39:01.622Z [INFO]  Handle User | signin
+db_1   | 2021-04-11 09:40:51.193 UTC [138] LOG:  invalid length of startup packet
+db_1   | 2021-04-11 09:40:52.307 UTC [139] LOG:  invalid length of startup packet
+api_1  | 2021-04-11T10:22:49.238Z [INFO]  Handle User | signin
+api_1  | 2021-04-11T10:27:47.135Z [INFO]  Handle User | signin
+api_1  | 2021-04-11T10:27:47.275Z [INFO]  Handle User | signin
+api_1  | 2021-04-11T10:27:47.289Z [INFO]  Handle Orders | CreateOrder
+api_1  | 2021-04-11T10:27:47.298Z [INFO]  Handle Orders | GetUserOrder
+api_1  | 2021-04-11T10:33:21.373Z [ERROR] Unauthorized: error="token contains an invalid number of segments"
+api_1  | 2021-04-11T10:33:56.214Z [INFO]  Handle Orders | GetUserOrder
+db_1   | 2021-04-11 10:37:43.336 UTC [267] LOG:  invalid length of startup packet
+db_1   | 2021-04-11 10:37:44.457 UTC [268] LOG:  invalid length of startup packet
+db_1   | 2021-04-11 10:37:45.323 UTC [269] LOG:  invalid length of startup packet
+db_1   | 2021-04-11 10:37:45.818 UTC [270] LOG:  invalid length of startup packet
+db_1   | 2021-04-11 10:37:46.044 UTC [271] LOG:  invalid length of startup packet
+api_1  | 2021-04-11T10:44:37.609Z [INFO]  Handle User | signin
+api_1  | 2021-04-11T10:44:37.620Z [INFO]  Handle Orders | GetUserOrder
+api_1  | 2021-04-11T10:44:37.765Z [INFO]  Handle User | signin
+api_1  | 2021-04-11T10:45:00.739Z [INFO]  Handle User | signin
+api_1  | 2021-04-11T10:45:00.751Z [INFO]  Handle Orders | GetUserOrder
+api_1  | 2021-04-11T10:45:00.903Z [INFO]  Handle User | signin
+api_1  | 2021-04-11T10:45:23.268Z [INFO]  Handle User | signin
+api_1  | 2021-04-11T10:45:23.278Z [INFO]  Handle Orders | GetUserOrder
+api_1  | 2021-04-11T10:45:23.426Z [INFO]  Handle User | signin
+api_1  | 2021-04-11T10:45:23.441Z [INFO]  Handle Orders | UpdateOrder
+api_1  | 2021-04-11T10:45:23.451Z [INFO]  Handle Orders | GetUserOrder
+api_1  | 2021-04-11T11:05:49.732Z [INFO]  Handle User | signin
+api_1  | 2021-04-11T11:05:49.758Z [INFO]  Handle Orders | GetUserOrder
+api_1  | 2021-04-11T11:05:50.111Z [INFO]  Handle User | signin
+api_1  | 2021-04-11T11:07:37.744Z [INFO]  Handle User | signin
+api_1  | 2021-04-11T11:07:37.775Z [INFO]  Handle Orders | GetUserOrder
+api_1  | 2021-04-11T11:07:37.808Z [INFO]  Handle Coffee Ingredients
+api_1  | 2021-04-11T11:07:38.144Z [INFO]  Handle User | signin
+api_1  | 2021-04-11T11:09:01.435Z [INFO]  Handle User | signin
+api_1  | 2021-04-11T11:09:01.465Z [INFO]  Handle Orders | DeleteOrder
+api_1  | 2021-04-11T11:09:23.575Z [INFO]  Handle Orders | GetUserOrder
+docker_compose_api_1 exited with code 2
+db_1   | 2021-04-11 11:09:40.082 UTC [1] LOG:  received smart shutdown request
+db_1   | 2021-04-11 11:09:40.095 UTC [1] LOG:  background worker "logical replication launcher" (PID 80) exited with exit code 1
+db_1   | 2021-04-11 11:09:40.099 UTC [75] LOG:  shutting down
+db_1   | 2021-04-11 11:09:40.157 UTC [1] LOG:  database system is shut down
+docker_compose_db_1 exited with code 0

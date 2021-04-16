@@ -1,0 +1,64 @@
+Aman@LAPTOP-C9SAAA6H MINGW64 ~/Desktop/VS XD (master)
+$ curl localhost:19090/health
+ok
+Aman@LAPTOP-C9SAAA6H MINGW64 ~/Desktop/VS XD (master)
+$ curl -Lo terraform-provider-hashicups https://github.com/hashicorp/terraform-provider-hashicups/releases/download/v0.3.1/terraform-provider-hashicups_0.3.1_windows_amd64.zip
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed  
+100   660  100   660    0     0    988      0 --:--:-- --:--:-- --:--:--   988 
+100 4998k  100 4998k    0     0   190k      0  0:00:26  0:00:26 --:--:--  203k
+
+Aman@LAPTOP-C9SAAA6H MINGW64 ~/Desktop/VS XD (master)
+$ mkdir -p %APPDATA%\terraform.d\plugins\hashicorp.com\edu\hashicups\0.3.1\windows_amd64
+
+Aman@LAPTOP-C9SAAA6H MINGW64 ~/Desktop/VS XD (master)
+$ unzip terraform-provider-hashicups_0.3.windows_amd64.zip -d %APPDATA%\terraform.d\plugins\hashicorp.com\edu\hashicups\0.3.1\windows_amd64
+unzip:  cannot find or open terraform-provider-hashicups_0.3.windows_amd64.zip, terraform-provider-hashicups_0.3.windows_amd64.zip.zip or terraform-provider-hashicups_0.3.windows_amd64.zip.ZIP.
+
+Aman@LAPTOP-C9SAAA6H MINGW64 ~/Desktop/VS XD (master)
+$ unzip terraform-provider-hashicups_0.3.windows_amd64.zip -d %APPDATA%\\terraform.d\\plugins\\hashicorp.com\\edu\\hashicups\\0.3.1\\windows_amd64
+unzip:  cannot find or open terraform-provider-hashicups_0.3.windows_amd64.zip, terraform-provider-hashicups_0.3.windows_amd64.zip.zip or terraform-provider-hashicups_0.3.windows_amd64.zip.ZIP.
+
+Aman@LAPTOP-C9SAAA6H MINGW64 ~/Desktop/VS XD (master)
+$ mkdir -p %APPDATA%\\terraform.d\\plugins\\hashicorp.com\\edu\\hashicups\\0.3.1\\windows_amd64
+
+Aman@LAPTOP-C9SAAA6H MINGW64 ~/Desktop/VS XD (master)
+$ unzip terraform-provider-hashicups_0.3.windows_amd64.zip -d %APPDATA%\\terraform.d\\plugins\\hashicorp.com\\edu\\hashicups\\0.3.1\\windows_amd64
+unzip:  cannot find or open terraform-provider-hashicups_0.3.windows_amd64.zip, terraform-provider-hashicups_0.3.windows_amd64.zip.zip or terraform-provider-hashicups_0.3.windows_amd64.zip.ZIP.
+
+Aman@LAPTOP-C9SAAA6H MINGW64 ~/Desktop/VS XD (master)
+$ unzip terraform-provider-hashicups_0.3.windows_amd64.zip -d %APPDATA%\terraform.d\plugins\hashicorp.com\edu\hashicups\0.3.1\windows_amd64
+unzip:  cannot find or open terraform-provider-hashicups_0.3.windows_amd64.zip, terraform-provider-hashicups_0.3.windows_amd64.zip.zip or terraform-provider-hashicups_0.3.windows_amd64.zip.ZIP.
+
+Aman@LAPTOP-C9SAAA6H MINGW64 ~/Desktop/VS XD (master)
+$ go build -o terraform-provider-hashicups.exe
+go: cannot find main module, but found .git/config in C:\Users\Aman Borkar
+        to create a module there, run:
+        cd ..\.. && go mod init
+
+Aman@LAPTOP-C9SAAA6H MINGW64 ~/Desktop/VS XD (master)
+$ curl -X POST localhost:19090/signup -d '{"username":"education", "password":"test123"}'
+{"UserID":1,"Username":"education","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTgyMjAzMjYsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiZWR1Y2F0aW9uIn0.hRvtmkbYYGvF8_EkO67ZV8WHMbbJceLSpf6aqzNoWsY"}
+
+Aman@LAPTOP-C9SAAA6H MINGW64 ~/Desktop/VS XD (master)
+$ curl -X POST localhost:19090/signin -d '{"username":"education", "password":"test123"}'
+{"UserID":1,"Username":"education","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTgyMjAzNDEsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiZWR1Y2F0aW9uIn0.SOGxz8JWps4Xx4SojlVRd_Rgf8CdgmL8MoOFUbwQsMc"}
+
+Aman@LAPTOP-C9SAAA6H MINGW64 ~/Desktop/VS XD (master)
+$ export HASHICUPS_TOKEN = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTgyMjAzNDEsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiZWR1Y2F0aW9uIn0.SOGxz8JWps4Xx4SojlVRd_Rgf8CdgmL8MoOFUbwQsMc
+bash: export: `=': not a valid identifier
+bash: export: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTgyMjAzNDEsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiZWR1Y2F0aW9uIn0.SOGxz8JWps4Xx4SojlVRd_Rgf8CdgmL8MoOFUbwQsMc': not a valid identifier
+
+Aman@LAPTOP-C9SAAA6H MINGW64 ~/Desktop/VS XD (master)
+$ export HASHICUPS_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTgyMjAzNDEsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiZWR1Y2F0aW9uIn0.SOGxz8JWps4Xx4SojlVRd_Rgf8CdgmL8MoOFUbwQsMc
+
+Aman@LAPTOP-C9SAAA6H MINGW64 ~/Desktop/VS XD (master)
+$ localhost:19090/orders/1
+bash: localhost:19090/orders/1: No such file or directory
+
+Aman@LAPTOP-C9SAAA6H MINGW64 ~/Desktop/VS XD (master)
+$ curl -X GET  -H "Authorization: ${HASHICUPS_TOKEN}" localhost:19090/orders/1
+{"id":1,"items":[{"coffee":{"id":3,"name":"Nomadicano","teaser":"Drink one today and you will want to schedule another","description":"","price":150,"image":"/nomad.png","ingredients":null},"quantity":2},{"coffee":{"id":2,"name":"Vaulatte","teaser":"Nothing gives you a safe and secure feeling like a Vaulatte","description":"","price":200,"image":"/vault.png","ingredients":null},"quantity":2}]}
+Aman@LAPTOP-C9SAAA6H MINGW64 ~/Desktop/VS XD (master)
+$ curl -X GET  -H "Authorization: ${HASHICUPS_TOKEN}" localhost:19090/orders/1
+{}
