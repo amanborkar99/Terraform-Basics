@@ -1,0 +1,95 @@
+[
+    {
+        "id": 1,
+        "name": "Packer Spiced Latte",
+        "teaser": "Packed with goodness to spice up your images",
+        "description": "",
+        "price": 350,
+        "image": "/packer.png",
+        "ingredients": [
+            {
+                "ingredient_id": 1
+            },
+            {
+                "ingredient_id": 2
+            },
+            {
+                "ingredient_id": 4
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Vaulatte",
+        "teaser": "Nothing gives you a safe and secure feeling like a Vaulatte",
+        "description": "",
+        "price": 200,
+        "image": "/vault.png",
+        "ingredients": [
+            {
+                "ingredient_id": 1
+            },
+            {
+                "ingredient_id": 2
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Nomadicano",
+        "teaser": "Drink one today and you will want to schedule another",
+        "description": "",
+        "price": 150,
+        "image": "/nomad.png",
+        "ingredients": [
+            {
+                "ingredient_id": 1
+            },
+            {
+                "ingredient_id": 3
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Terraspresso",
+        "teaser": "Nothing kickstarts your day like a provision of Terraspresso",
+        "description": "",
+        "price": 150,
+        "image": "terraform.png",
+        "ingredients": [
+            {
+                "ingredient_id": 1
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Vagrante espresso",
+        "teaser": "Stdin is not a tty",
+        "description": "",
+        "price": 200,
+        "image": "vagrant.png",
+        "ingredients": [
+            {
+                "ingredient_id": 1
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Connectaccino",
+        "teaser": "Discover the wonders of our meshy service",
+        "description": "",
+        "price": 250,
+        "image": "consul.png",
+        "ingredients": [
+            {
+                "ingredient_id": 1
+            },
+            {
+                "ingredient_id": 5
+            }
+        ]
+    }
+]
