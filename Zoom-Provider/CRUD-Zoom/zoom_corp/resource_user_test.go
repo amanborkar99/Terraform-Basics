@@ -90,3 +90,68 @@ func testAccCheckZoomUserExists(resource string) resource.TestCheckFunc {
 	}
 }
 
+func TestAccUser_Update(t *testing.T) {
+	resource.Test(t, resource.TestCase{
+		PreCheck:     func() { testAccPreCheck(t) },
+		Providers:    testAccProviders,
+		CheckDestroy: testAccCheckItemDestroy,
+		Steps: []resource.TestStep{
+			{
+				Config: testAccCheckUserUpdatePre(),
+				Check: resource.ComposeTestCheckFunc(
+					testAccCheckZoomUserExists("zoom_user.user"),
+				  resource.TestCheckResourceAttr(
+					"zoom_resource.user", "email", "amanborkar17@cse.iiitp.ac.in"),
+
+				  resource.TestCheckResourceAttr(
+					  "zoom_resource.user", "first_name", "Aman" ),
+
+				  resource.TestCheckResourceAttr( 
+					  "zoom_user.user", "last_name", "Borkar"),
+
+				  resource.TestCheckResourceAttr( 
+						"zoom_user.user", "type", "1"),
+				),
+			},
+			{
+				Config: testAccCheckUserUpdatePost(),
+				Check: resource.ComposeTestCheckFunc(
+					testAccCheckZoomUserExists("zoom_user.user"),
+				  resource.TestCheckResourceAttr(
+					"zoom_resource.user", "email", "amanborkar17@cse.iiitp.ac.in"),
+
+				  resource.TestCheckResourceAttr(
+					  "zoom_resource.user", "first_name", "Aman" ),
+
+				  resource.TestCheckResourceAttr( 
+					  "zoom_user.user", "last_name", "VIPBoss"),
+
+				  resource.TestCheckResourceAttr( 
+						"zoom_user.user", "type", "1"),
+				),
+			},
+		},
+	})
+}
+
+func testAccCheckUserUpdatePre() string {
+	return fmt.Sprintf(`
+	resource "zoom_resource" "user" {
+		email = "amanborkar17@cse.iiitp.ac.in"
+		first_name = "Aman"
+		last_name = "Borkar"
+		type = 1
+	}  
+`)
+}
+
+func testAccCheckUserUpdatePost() string {
+	return fmt.Sprintf(`
+	resource "zoom_resource" "user" {
+		email = "amanborkar17@cse.iiitp.ac.in"
+		first_name = "Aman"
+		last_name = "VIPBoss"
+		type = 1
+	}  
+`)
+}
